@@ -7,3 +7,24 @@ body {
   height: 400px;
   width: 100%;
 }
+
+
+.navigation ul{
+  display: flex;
+  justify-content: space-evenly;
+  
+
+}
+
+.navigation li{
+  list-style: none;
+  display: inline;
+  
+  
+  
+}
+
+.navigation{
+  background-color: rgb(92, 202, 202) !important ;
+  text-decoration: none;
+}
