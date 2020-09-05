@@ -2,7 +2,12 @@ import React from 'react';
 import './App.css';
 import { Grid, AppBar } from '@material-ui/core';
 import Header from './Components/Header';
-import { Link } from 'react-router-dom';
+import { Link, Routes, Route } from 'react-router-dom';
+import Home from './Components/Home';
+import ProductList from './Components/ProductList';
+import ContactUs from './Components/ContactUs';
+import About from './Components/About';
+import ProductListIndex from './Components/ProductListIndex';
 
 
 function App() {
@@ -21,21 +26,21 @@ function App() {
             <li><Link to="ContactUs">Contact Us</Link></li>
             <li><Link to="About">About Us</Link></li>
           </ul>
-      
         </AppBar>
+        
       </Grid>
-      <Grid container space={3}>
-        <Grid item xs={12} sm={4}>
-          item 1
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          Item 2
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          Item 3
-        </Grid>
+      
+      
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="ProductList" element={<ProductList />} > 
+            <Route path="/" element={<ProductListIndex />} /> 
+          </Route>
 
-      </Grid>
+          <Route path="ContactUs" element={<ContactUs />} />
+          <Route path="About" element={<About />} />
+        </Routes>
+        
     </div>
   );
 }
