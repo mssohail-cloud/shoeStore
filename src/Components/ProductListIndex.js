@@ -1,7 +1,6 @@
 import React from 'react'
 import { makeStyles, Card, CardActionArea, CardMedia, CardContent, Typography, Grid, CardActions, } from '@material-ui/core';
-import { Link, Routes, Route } from 'react-router-dom';
-import ProductDetails from './ProductDetails';
+import { Link} from 'react-router-dom';
 
 const useStyles = makeStyles({
     root: {
