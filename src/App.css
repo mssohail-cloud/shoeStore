@@ -1,6 +1,4 @@
-body {
-  margin: 0;
-}
+
 
 .heroImg{
   display: flex;
@@ -29,7 +27,4 @@ body {
   text-decoration: none;
 }
 
-.container{
-  margin-top: 90px;
-}
 
