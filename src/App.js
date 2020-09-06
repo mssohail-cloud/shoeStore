@@ -8,6 +8,7 @@ import ProductList from './Components/ProductList';
 import ContactUs from './Components/ContactUs';
 import About from './Components/About';
 import ProductListIndex from './Components/ProductListIndex';
+import ProductDetails from './Components/ProductDetails';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="ProductList" element={<ProductList />} > 
             <Route path="/" element={<ProductListIndex />} /> 
+            <Route path=":productID" element={<ProductDetails /> } />
           </Route>
 
           <Route path="ContactUs" element={<ContactUs />} />

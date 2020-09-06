@@ -1,5 +1,7 @@
 import React from 'react'
-import { makeStyles, Card, CardActionArea, CardMedia, CardContent, Typography, Grid, } from '@material-ui/core';
+import { makeStyles, Card, CardActionArea, CardMedia, CardContent, Typography, Grid, CardActions, } from '@material-ui/core';
+import { Link, Routes, Route } from 'react-router-dom';
+import ProductDetails from './ProductDetails';
 
 const useStyles = makeStyles({
     root: {
@@ -44,6 +46,9 @@ function ProductListIndex() {
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
+                        <CardActions>
+                            <Link to={productID}>See Details </Link>
+                        </CardActions>
                     </Card>
                     </Grid>
                    
