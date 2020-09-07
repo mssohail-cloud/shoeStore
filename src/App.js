@@ -15,12 +15,13 @@ function App() {
   return (
     <div>
       <Grid>
-        <Grid Item xs={12}>
+        <Grid item xs={12}>
           <Header />
         </Grid>
       </Grid>
       <Grid>
-        <AppBar className="navigation" position="static">
+        <Grid item xs={12}>
+           <AppBar className="navigation" position="static">
           <ul>
             <li><Link to="/" color="primary">Home</Link></li>
             <li><Link to="ProductList">Products</Link></li>
@@ -28,7 +29,7 @@ function App() {
             <li><Link to="About">About Us</Link></li>
           </ul>
         </AppBar>
-        
+        </Grid>
       </Grid>
       
       

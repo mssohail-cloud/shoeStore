@@ -1,16 +1,33 @@
 import React from 'react'
 import { useParams } from 'react-router'
+import { Grid, makeStyles } from '@material-ui/core';
+
+const useStyle = makeStyles({
+  productImg :{
+    height:350, 
+    width: 350,
+
+  }
+})
 
 function ProductDetails() {
+  const style = useStyle();
+
     const {productID} = useParams();
     const product = shoes[productID];
     const {name, img} = product;
 
     return (
-        <div>
+        <>
+        <Grid>
+          <Grid item xs={12} sm={3}>
             <h3>{name}</h3>
-            <img src={img} alt={name} />
-        </div>
+            <img className={style.productImg} src={img} alt={name} />
+            <button>Add to Cart!</button>
+          </Grid>
+        </Grid>
+            
+        </>
     )
 }
 const shoes = {

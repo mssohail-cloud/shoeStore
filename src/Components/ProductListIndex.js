@@ -5,7 +5,7 @@ import { Link} from 'react-router-dom';
 const useStyles = makeStyles({
     root: {
         flexGrow: 1, 
-        marginLeft: 100,
+        marginLeft: 70, 
       
     },
     media: {
@@ -25,10 +25,10 @@ function ProductListIndex() {
         <div className={style.root}>
             <Grid
             container
-            spacing={2}
+            spacing={1}
             direction="row"
             justify="space-evenly"
-            alignItems="flex-start">
+            justifyContent="center">
                 {Object.entries(shoes).map(([productID, { name, img }]) =>
 
                 <Grid item xs={12} sm={6} md={4} key={productID}>
